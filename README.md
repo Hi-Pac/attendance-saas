@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Attendance Management System
 
-## Getting Started
+A production-ready SaaS web application for employee attendance tracking with geolocation support.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Frontend**: Next.js 16 (App Router) with TypeScript
+- **Backend**: Supabase (Authentication + PostgreSQL Database)
+- **Styling**: TailwindCSS
+- **Deployment**: Vercel
+- **Maps**: Browser Geolocation API
+
+## 📋 Project Structure
+
+```
+attendance-saas/
+├── app/                    # Next.js App Router pages
+├── components/             # React components
+├── lib/                   # Utility functions
+│   └── supabase/         # Supabase client configurations
+├── types/                 # TypeScript type definitions
+├── middleware.ts          # Next.js middleware for auth
+└── .env.local.example     # Environment variables template
+```
+
+## 🛠️ Setup Instructions
+
+### Step 1: Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 2: Configure Environment Variables
+
+1. Copy `.env.local.example` to `.env.local`:
+   ```bash
+   cp .env.local.example .env.local
+   ```
+
+2. Get your Supabase credentials:
+   - Go to [Supabase Dashboard](https://app.supabase.com)
+   - Create a new project (or use existing)
+   - Go to Settings → API
+   - Copy `Project URL` and `anon public` key
+
+3. Update `.env.local` with your Supabase credentials:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your_project_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+   ```
+
+### Step 3: Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Development Phases
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ✅ **Phase 1**: Project initialization
+- ⏳ **Phase 2**: Supabase setup & database schema
+- ⏳ **Phase 3**: Authentication system
+- ⏳ **Phase 4**: Employee dashboard
+- ⏳ **Phase 5**: Admin dashboard
+- ⏳ **Phase 6**: Testing & deployment
 
-## Learn More
+## 🔐 Features (MVP)
 
-To learn more about Next.js, take a look at the following resources:
+- Admin login
+- Company creation
+- Employee management
+- Employee login
+- Check-in/Check-out with geolocation
+- Attendance records storage
+- Admin dashboard with reports
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Next Steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+After completing Step 1, proceed to Step 2: Supabase Setup & Database Schema.
