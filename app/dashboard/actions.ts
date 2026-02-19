@@ -1,6 +1,6 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '../../lib/supabase/server'
 
 type Geo = { latitude: number; longitude: number }
 

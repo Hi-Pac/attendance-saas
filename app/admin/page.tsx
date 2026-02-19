@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
-import { addEmployee, updateEmployee, deleteEmployee, resetEmployeePassword, type AddEmployeeResult, type UpdateEmployeeResult, type DeleteEmployeeResult, type ResetPasswordResult } from '@/app/admin/actions'
-import Navbar from '@/components/navbar'
+import { createClient } from '../../lib/supabase/client'
+import { addEmployee, updateEmployee, deleteEmployee, resetEmployeePassword, type AddEmployeeResult, type UpdateEmployeeResult, type DeleteEmployeeResult, type ResetPasswordResult } from './actions'
+import Navbar from '../../components/navbar'
 
 type EmployeeRow = {
   id: string

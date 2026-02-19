@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
-import Navbar from '@/components/navbar'
+import { createClient } from '../../../lib/supabase/client'
+import Navbar from '../../../components/navbar'
 
 type Employee = {
   id: string

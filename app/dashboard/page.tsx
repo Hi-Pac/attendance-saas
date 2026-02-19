@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import { createClient } from '../../lib/supabase/client'
 import { checkIn, checkOut } from './actions'
-import Navbar from '@/components/navbar'
+import Navbar from '../../components/navbar'
 
 type TodayRecord = {
   id: string
